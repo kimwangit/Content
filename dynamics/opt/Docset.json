@@ -1,8 +1,7 @@
 {
   "docset_name": "Docset2_HowTo",
-  "docset_path": "/dynamics/opt",
   "site_name": "MSDN",
-  "toc_file": "/dynamics/opt/TOC.md",
+  "toc_file": "TOC.md",
   "template": "GetStarted",
   "product_family_version": "VS.110",
   "locale":"en-us",

@@ -13,3 +13,8 @@ Coming soon!!!!!
 This is quite easy.
 
 [!INCLUDE [hello](hello.md)]
+
+![Sample pic](images\girl.png)
+
+Here's link to some article
+[Hello](hello.md)
