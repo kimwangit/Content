@@ -1,0 +1,10 @@
+{
+    "docset_files": [
+            "dynamics/crm/Docset.json",
+            "dynamics/opt/Docset.json"
+    ],
+    "build_config": {
+        "incremental": "true",
+        "force_build": "true"
+    }
+}
