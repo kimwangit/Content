@@ -4,19 +4,14 @@
     xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
-    <BuildTaskPackage>OpenAuthoringPublishingBuild</BuildTaskPackage>
-    <ToolsFolder>$(MSBuildThisFileDirectory)Tools\</ToolsFolder>    
+    <BuildTaskPackage>OpenPublishingBuild</BuildTaskPackage>
+    <ToolsFolder>$(MSBuildThisFileDirectory)Tools\</ToolsFolder>
   </PropertyGroup>
 
   <PropertyGroup>
     <PackageInstalled>True</PackageInstalled>
-    <PackageInstalled Condition="EXISTS('$(PackageRootFolder)build\net451\OpenAuthoringPublishing.props') != 'True'">False</PackageInstalled>
-    <PackageInstalled Condition="EXISTS('$(PackageRootFolder)build\net451\OpenAuthoringPublishing.mdproj') != 'True'">False</PackageInstalled>
-  </PropertyGroup>
-  
-  <PropertyGroup>
-    <NuGetSourceArgument Condition="$(NuGetPackageDirectory) == ''"></NuGetSourceArgument>
-    <NuGetSourceArgument Condition="$(NuGetPackageDirectory) != ''">-Source &quot;https://www.nuget.org/api/v2/&quot; -Source &quot;$(NuGetPackageDirectory)&quot;</NuGetSourceArgument>
+    <PackageInstalled Condition="EXISTS('$(PackageRootFolder)build\net451\OpenPublishingBuild.props') != 'True'">False</PackageInstalled>
+    <PackageInstalled Condition="EXISTS('$(PackageRootFolder)build\net451\OpenPublishingBuild.mdproj') != 'True'">False</PackageInstalled>
   </PropertyGroup>
 
   <!-- nuget Restore Target-->
@@ -28,7 +23,7 @@
     <Error Condition="EXISTS('$(ToolsFolder)NuGet\NuGet.exe') != 'True'" Text="Nuget.exe was not found at the expected location: $(ToolsFolder)NuGet." />
     
     <!-- Use NuGet to pull down any packages -->
-    <Exec Command="&quot;$(ToolsFolder)NuGet\NuGet.exe&quot; restore &quot;$(MSBuildThisFileDirectory)\packages.config&quot; -PackagesDirectory &quot;$(MSBuildThisFileDirectory)\packages&quot; $(NuGetSourceArgument)"
+    <Exec Command="&quot;$(ToolsFolder)NuGet\NuGet.exe&quot; restore &quot;.\packages.config&quot; –PackagesDirectory &quot;.\packages&quot;"
           Condition="$(PackageInstalled) != 'True'"/>
 
     <!-- Get installed packgage version -->
@@ -65,7 +60,7 @@
 
     <MSBuild 
         Targets="Build" 
-        Projects="$(PackageRootFolder)build\net451\OpenAuthoringPublishing.mdproj" />
+        Projects="$(PackageRootFolder)build\net451\OpenPublishingBuild.mdproj" />
 
   </Target>
 
@@ -75,7 +70,7 @@
 
     <MSBuild 
         Targets="Clean" 
-        Projects="$(PackageRootFolder)build\net451\OpenAuthoringPublishing.mdproj" />
+        Projects="$(PackageRootFolder)build\net451\OpenPublishingBuild.mdproj" />
 
   </Target>
 
@@ -85,7 +80,7 @@
 
     <MSBuild 
         Targets="Rebuild" 
-        Projects="$(PackageRootFolder)build\net451\OpenAuthoringPublishing.mdproj" />
+        Projects="$(PackageRootFolder)build\net451\OpenPublishingBuild.mdproj" />
   </Target>
 
 </Project>
