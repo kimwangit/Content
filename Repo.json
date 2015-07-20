@@ -1,7 +1,7 @@
 {
     "docset_files": [
-            "dynamics/crm/Docset.json",
-            "dynamics/opt/Docset.json"
+            "openpublishing/demo/Docset.json",
+            "openpublishing/sample/Docset.json"
     ],
     "build_config": {
         "incremental": "true",

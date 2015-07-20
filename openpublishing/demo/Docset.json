@@ -1,10 +1,10 @@
 {
-  "docset_name": "Docset2_HowTo",
+  "docset_name": "openpublishingdemo",
   "site_name": "MSDNINT",
   "toc_file": "TOC.md",
   "template": "GetStarted",
   "product_family": "VS",
-  "product_version":"110",
+  "product_version":"0",
   "locale":"en-us",
   "common_metadata":{}
 }
