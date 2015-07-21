@@ -1,7 +1,7 @@
 <Project 
     DefaultTargets="Publish"
     ToolsVersion="4.0"
-    xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
     <BuildTaskPackage>OpenPublishingBuild</BuildTaskPackage>
@@ -21,12 +21,12 @@
     <!-- file, packages.config, and nuget.exe. The rest can be boot strapped by the build process. -->
     <Error Condition="EXISTS('$(MSBuildThisFileDirectory)packages.config') != 'True'" Text="packages.config was not found at the expected location: $(MSBuildThisFileDirectory)." />
     <Error Condition="EXISTS('$(ToolsFolder)NuGet\NuGet.exe') != 'True'" Text="Nuget.exe was not found at the expected location: $(ToolsFolder)NuGet." />
-    
+
     <!-- Use NuGet to pull down any packages -->
     <PropertyGroup>
       <NuGetConfigFileArgument Condition="EXISTS('$(ToolsFolder)NuGet\NuGet.config') == 'True'">-ConfigFile &quot;$(ToolsFolder)NuGet\NuGet.config&quot;</NuGetConfigFileArgument>
     </PropertyGroup>
-    <Exec Command="&quot;$(ToolsFolder)NuGet\NuGet.exe&quot; restore &quot;.\packages.config&quot; –PackagesDirectory &quot;.\packages&quot; $(NuGetConfigFileArgument)"
+    <Exec Command="&quot;$(ToolsFolder)NuGet\NuGet.exe&quot; restore &quot;.\packages.config&quot; -PackagesDirectory &quot;.\packages&quot; $(NuGetConfigFileArgument)"
           Condition="$(PackageInstalled) != 'True'"/>
 
     <!-- Get installed package version -->
@@ -85,4 +85,5 @@
         Targets="Rebuild" 
         Projects="$(PackageRootFolder)build\net451\OpenPublishingBuild.mdproj" />
   </Target>
+
 </Project>
