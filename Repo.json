@@ -7,6 +7,9 @@
     "build_config": {
         "incremental": "true",
         "force_build": "true",
-        "notification_list":"OPBuild@microsoft.com"
+        "notification_subscribers":[
+            "OPBuild@microsoft.com",
+            "clixcbdev@microsoft.com"
+        ]
     }
 }
