@@ -26,7 +26,7 @@
     <PropertyGroup>
       <NuGetConfigFileArgument Condition="EXISTS('$(ToolsFolder)NuGet\NuGet.config') == 'True'">-ConfigFile &quot;$(ToolsFolder)NuGet\NuGet.config&quot;</NuGetConfigFileArgument>
     </PropertyGroup>
-    <Exec Command="&quot;$(ToolsFolder)NuGet\NuGet.exe&quot; restore &quot;.\packages.config&quot; –PackagesDirectory &quot;.\packages&quot; $(NuGetConfigFileArgument)"
+    <Exec Command="&quot;$(ToolsFolder)NuGet\NuGet.exe&quot; restore &quot;.\packages.config&quot; -PackagesDirectory &quot;.\packages&quot; $(NuGetConfigFileArgument)"
           Condition="$(PackageInstalled) != 'True'"/>
 
     <!-- Get installed package version -->
