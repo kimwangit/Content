@@ -1,10 +1,12 @@
 {
     "docset_files": [
             "openpublishing/demo/Docset.json",
-            "openpublishing/sample/Docset.json"
+            "openpublishing/sample/Docset.json",
+            "openpublishing/corefx/Docset.json"
     ],
     "build_config": {
         "incremental": "true",
-        "force_build": "true"
+        "force_build": "true",
+        "notification_list":"OPBuild@microsoft.com"
     }
 }
