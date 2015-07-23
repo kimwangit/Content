@@ -13,5 +13,5 @@ This is quite easy.
 Here's a pic:
 ![Sample pic](images\girl.png)
 
-Here's link to out teams
+Here's link to our teams
 [Teams](Teams.md)
