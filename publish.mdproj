@@ -68,6 +68,14 @@
   </Target>
 
   <Target 
+      Name="Serve"
+      DependsOnTargets="Build">
+
+     <Exec Command="&quot;$(PackageRootFolder)bin\preview.exe&quot; &quot;$(OutputFolder)&quot;"/>
+
+  </Target>
+
+  <Target
       Name="Clean"
       DependsOnTargets="RestorePackages">
 
