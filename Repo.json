@@ -1,8 +1,8 @@
 {
     "docset_files": [
-            "dynamics/crm1/Docset.json",
-			"dynamics/crmhumao1/Docset.json",
-            "dynamics/opt1/Docset.json"
+            "dynamics/crm11/Docset.json",
+			"dynamics/crmhumao11/Docset.json",
+            "dynamics/opt11/Docset.json"
     ],
     "build_config": {
         "incremental": "true",
