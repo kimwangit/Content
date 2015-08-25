@@ -1,0 +1,10 @@
+{
+  "docset_name": "Docset_HowTo_Huachao",
+  "site_name": "MSDN",
+  "toc_file": "TOC.md",
+  "template": "GetStarted",
+  "product_family": "VS",
+  "product_version":"110",
+  "locale":"en-us",
+  "common_metadata":{}
+}
